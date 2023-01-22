@@ -2,7 +2,7 @@
   <div class="banner">
     <div class="mm"></div>
     <div class="banner-img">
-      <img src="../assets/img/bgtop.jpg" />
+      <img :src="img" />
     </div>
     <div class="banner-title">
       <p>{{title}}</p>
@@ -43,8 +43,6 @@ export default {
     padding: 10px;
     margin: -10px;
     filter: blur(10px);
-
-    background-image: url(../assets/img/bgtop.jpg);
     background-position: center;
     background-size: 100%;
   }

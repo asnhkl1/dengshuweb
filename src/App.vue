@@ -3,7 +3,7 @@
     <el-container>
       <el-header>
         <div class="logo">
-          <img src="./assets/img/toplogo.png" alt />
+          <img src="./assets/img/dengshu_logo.png" alt />
         </div>
         <el-menu
           :default-active="defaultActive"
@@ -12,50 +12,42 @@
           @select="handleSelect"
           :router="router"
         >
-          <el-menu-item index="/">首页</el-menu-item>
-          <el-menu-item index="/news">新闻资讯</el-menu-item>
-          <el-menu-item index="/product">产品中心</el-menu-item>
-          <el-menu-item index="/case">经典案例</el-menu-item>
-          <el-menu-item index="/goin">走进科建</el-menu-item>
-          <el-menu-item index="/download">下载APP</el-menu-item>
+<!--          <el-menu-item index="/">首页</el-menu-item>-->
+<!--          <el-menu-item index="/news">新闻资讯</el-menu-item>-->
+<!--          <el-menu-item index="/product">产品中心</el-menu-item>-->
+<!--          <el-menu-item index="/case">经典案例</el-menu-item>-->
+          <el-menu-item index="/goin">首页</el-menu-item>
+          <el-menu-item index="/download">旗下产品</el-menu-item>
         </el-menu>
       </el-header>
       <el-main>
         <router-view />
       </el-main>
-      <div class="footer" v-show="isShow">
+      <div class="footer">
         <div class="footer-content">
           <ul class="content-nav">
             <li>
-              <p>走进科建</p>
-              <span>发展历程</span>
-              <span>企业文化</span>
-              <span>资质荣誉</span>
-              <span>合作伙伴</span>
+              <p>走进灯树</p>
+              <span>公司简介</span>
             </li>
             <li>
-              <p>新闻资讯</p>
-              <span>公司新闻</span>
-              <span>行业动态</span>
+              <p>旗下产品</p>
+              <span>拜托了App</span>
             </li>
             <li>
-              <p>产品中心</p>
-              <span>介绍视频</span>
-              <span>管理模式</span>
-              <span>平台目标</span>
-              <span>功能模块</span>
+              <p>法律信息</p>
+              <span @click="privacy" style="cursor: pointer;">隐私政策</span>
             </li>
             <li>
               <p>联系我们</p>
-              <span>邮箱：kejianlml@163.com</span>
-              <span>电话：021-55802368</span>
-              <span>地址：上海市杨浦区翔殷路128号12号楼101</span>
+              <span>邮箱：dencent@lanterntreechain.com</span>
+              <span>电话：15303750097</span>
+              <span>地址：上海市奉贤区大叶公路8188号8幢</span>
             </li>
           </ul>
-          <img src="./assets/img/ercode.png" alt />
         </div>
         <div class="copyright">
-          <span>科建版权所有</span>
+          <span>Copyright © 2023 上海灯树科技有限公司版权所有 | 沪ICP备2023000787号</span>
         </div>
       </div>
     </el-container>
@@ -73,8 +65,11 @@ export default {
   },
   methods: {
     handleSelect(key) {
-      this.isShow = this.defaultActive != key;
+      this.isShow = this.defaultActive !== key;
       window.console.log(this.isShow);
+    },
+    privacy(){
+      window.open("https://cloud1-6gguy58e676ea1e0-1316558030.tcloudbaseapp.com/privacy/privacy.html?sign=04f35535adb7dbbe4b63533cc0c6aa6c&t=1674316548")
     }
   }
 };
@@ -107,7 +102,6 @@ body {
 
   .logo {
     width: 280px;
-    padding: 10px;
     img {
       width: 100%;
       line-height: 60px;
@@ -120,9 +114,7 @@ body {
 
 .footer {
   width: 100%;
-  height: 216px;
   overflow: hidden;
-  background-color: #14679f;
   &-content {
     width: 1240px;
     margin: 0 auto;
@@ -140,11 +132,11 @@ body {
         align-items: flex-start;
         p {
           font-size: 20px;
-          color: #d4edff;
+          color: #000000;
           padding: 10px 0;
         }
         span {
-          color: #f7f7f7;
+          color: #000000;
           font-weight: 300;
           padding: 5px 0;
         }
@@ -158,9 +150,10 @@ body {
   }
   .copyright {
     height: 30px;
-    background: #125688;
+    display: flex;
+    justify-content: center;
     span {
-      color: #fff;
+      color: #000000;
       line-height: 30px;
     }
   }

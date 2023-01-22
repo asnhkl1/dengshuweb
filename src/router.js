@@ -37,7 +37,7 @@ let kejianrouter = new Router({
     {
       path: '/goin',
       name: 'goin',
-      component: () => import('./views/GoIn.vue')
+      component: () => import('./views/Home.vue')
     },
     {
       path: '/download',
