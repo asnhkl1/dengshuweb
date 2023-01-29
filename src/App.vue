@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-container>
-      <el-header>
+      <el-header v-show="isShow">
         <div class="logo">
           <img src="./assets/img/dengshu_logo.png" alt />
         </div>
@@ -23,7 +23,7 @@
       <el-main>
         <router-view />
       </el-main>
-      <div class="footer">
+      <div class="footer" v-show="isShow">
         <div class="footer-content">
           <ul class="content-nav">
             <li>
@@ -63,13 +63,16 @@ export default {
       isShow: false
     };
   },
+  updated() {
+    this.isShow = this.$route.path !== "/privacy"
+    window.console.log(this.isShow)
+  },
   methods: {
-    handleSelect(key) {
-      this.isShow = this.defaultActive !== key;
-      window.console.log(this.isShow);
+    handleSelect() {
+      // window.console.log(this.isShow);
     },
     privacy(){
-      window.open("https://cloud1-6gguy58e676ea1e0-1316558030.tcloudbaseapp.com/privacy/privacy.html?sign=04f35535adb7dbbe4b63533cc0c6aa6c&t=1674316548")
+      window.open("http://www.lanterntreechain.com/#/privacy")
     }
   }
 };

@@ -50,6 +50,11 @@ let kejianrouter = new Router({
       component: () => import('./views/Login.vue')
     },
     {
+      path: '/privacy',
+      name: 'privacy',
+      component: () => import('./views/Privacy.vue')
+    },
+    {
       path: '/admin',
       name: 'admin',
       meta: {
