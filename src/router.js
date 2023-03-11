@@ -55,6 +55,11 @@ let kejianrouter = new Router({
       component: () => import('./views/Privacy.vue')
     },
     {
+      path: '/payAgreement',
+      name: 'payAgreement',
+      component: () => import('./views/PayAgreement.vue')
+    },
+    {
       path: '/admin',
       name: 'admin',
       meta: {
