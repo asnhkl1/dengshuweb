@@ -60,6 +60,13 @@ let kejianrouter = new Router({
       component: () => import('./views/PayAgreement.vue')
     },
     {
+      path: '/privacy-mini',
+      name: 'privacy-mini',
+      component: () => import('./views/PrivacyMini.vue')
+    },
+
+
+    {
       path: '/admin',
       name: 'admin',
       meta: {

@@ -64,7 +64,7 @@ export default {
     };
   },
   updated() {
-    this.isShow = this.$route.path !== "/privacy" && this.$route.path !== "/pay-agreement"
+    this.isShow = this.$route.path !== "/privacy" && this.$route.path !== "/pay-agreement" && this.$route.path !== "/privacy-mini"
     window.console.log(this.isShow)
   },
   methods: {
