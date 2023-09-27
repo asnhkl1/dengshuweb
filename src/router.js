@@ -64,6 +64,11 @@ let kejianrouter = new Router({
       name: 'privacy-mini',
       component: () => import('./views/PrivacyMini.vue')
     },
+    {
+      path: '/privacy-mini-hzd',
+      name: 'privacy-mini-hzd',
+      component: () => import('./views/PrivacyMiniHzd.vue')
+    },
 
 
     {
