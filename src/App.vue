@@ -67,6 +67,7 @@ export default {
     this.isShow = this.$route.path !== "/privacy" && this.$route.path !== "/pay-agreement"
         && this.$route.path !== "/privacy-mini"
         && this.$route.path !== "/privacy-mini-hzd"
+        && this.$route.path !== "/yytAd"
     window.console.log(this.isShow)
   },
   methods: {
