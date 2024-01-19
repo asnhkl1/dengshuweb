@@ -68,6 +68,7 @@ export default {
         && this.$route.path !== "/privacy-mini"
         && this.$route.path !== "/privacy-mini-hzd"
         && this.$route.path !== "/yytAd"
+        && this.$route.path !== "/dsAd"
     window.console.log(this.isShow)
   },
   methods: {

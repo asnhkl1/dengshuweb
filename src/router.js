@@ -75,6 +75,11 @@ let kejianrouter = new Router({
       component: () => import('./views/YytAd.vue')
     },
     {
+      path: '/dsAd',
+      name: 'dsAd',
+      component: () => import('./views/dsAd.vue')
+    },
+    {
       path: '/admin',
       name: 'admin',
       meta: {
