@@ -25,7 +25,11 @@ export default {
   methods: {
     goAli(){
       const url = "https://ds.alipay.com/?scheme=" + encodeURIComponent("alipays://platformapi/startApp?appId=2021004112614346&page=page/tabBar/home/index&query=" + encodeURIComponent("CHANNEL_SCENE=" + this.tag))
-      window.location.href = url
+      if(this.tag.toUpperCase() == "YPH"){
+        window.location.href = "https://blank"
+      }else{
+        window.location.href = url
+      }
     },
     getQueryParams (url) {
       let params = url.split('?')[1];
